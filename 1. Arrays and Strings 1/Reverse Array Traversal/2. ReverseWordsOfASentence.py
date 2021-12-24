@@ -1,7 +1,7 @@
 """
 Given a sentence - "i live in a house" convert it to -  "house a in live i".
-This is very similar to the string reversal problem made using 2 pointers start and end, decrement
-end adn increment start till start <= end...
+end will point to len(str) and start will point to len(str) - 1, then decrease start, if u encounter
+a space, then push a new word from s[start:end]
 """
 
 s = input()
