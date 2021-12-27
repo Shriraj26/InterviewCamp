@@ -10,9 +10,10 @@ def twoSum():
     start = 0
     end = len(arr) - 1
     while start < end:
-        if arr[start] + arr[end] == K:
+        currentSum = arr[start] + arr[end]
+        if currentSum == K:
             return [start, end]
-        elif arr[start] + arr[end] > K:
+        elif currentSum > K:
             end -= 1
         else:
             start += 1
