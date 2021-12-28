@@ -3,6 +3,9 @@ Given an array of integers, find the contiguous subarray (with at least 1 elemen
 The array can contain both negative and positive integers.
 Ex -
 -2, -3, 4, -1, -2, 1, 5, -1 => The max Sum of a subArray is - 7 that we get from 4,-1,-2,1,5
+
+Max sum at a[i] is either - only a[i] or prev_sum(till a[i-1])+a[i]
+
 Kadane's Algorithm uses Dynamic Programming, This is the condition that we need to check -
 maxSumAt i = max( a[i]+maxSumAt i-1 ,  a[i]  )
 Therefore, we either include the sum at i-1 + a[i] or we only take a[i]
