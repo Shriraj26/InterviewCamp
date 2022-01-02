@@ -21,7 +21,7 @@ Here we follow 5 steps -
 m = int(input('Enter number of rows - '))
 n = int(input('Enter number of columns - '))
 mat = [[int(x) for x in input().split()] for y in range(m)]
-memo = [[None for x in range(n)] for y in range(m)]
+memo = [['UNVISITED' for x in range(n)] for y in range(m)]
 
 
 def outOfBounds(i, j):
