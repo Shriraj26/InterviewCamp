@@ -10,58 +10,48 @@ class Node:
         self.data = data
         self.next = None
 
+class LinkedList:
 
-def createLL(arr):
-    head = None
-    temp = None
-    for i in arr:
-        newNode = Node(i)
+    def __init__(self):
 
-        if head is None:
-            head = newNode
-            temp = head
+        self.head = None
+        self.tail = None
 
-        else:
-            temp.next = newNode
+    def createLL(self, arr):
+
+        for i in arr:
+            newNode = Node(i)
+            if self.head is None:
+                self.head = newNode
+                self.tail = newNode
+
+            else:
+                self.tail.next = newNode
+                self.tail = self.tail.next
+
+    def printLL(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.data, end = ' ')
             temp = temp.next
+        print()
 
-    return head
+    def appendNode(self, node):
 
+        if self.head is None:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            self.tail = self.tail.next
 
-def printLL(head):
-    while head is not None:
-        print(head.data, end=' ')
-        head = head.next
-
-
-def getTail(head):
-    if head is None:
-        return None
-    else:
-        while head.next is not None:
-            head = head.next
-
-        return head
-
-
-def append(head, tail, X):
-    if head is None:
-        return X
-    else:
-        tail.next = X
-        tail = tail.next
-
-    return head
 
 
 arr = [int(x) for x in input().split()]
-head = createLL(arr)
-printLL(head)
-tail = getTail(head)
-print('tails ist - ')
-printLL(tail)
-print()
-
+inpLL = LinkedList()
+inpLL.createLL(arr)
+inpLL.printLL()
 X = Node(int(input('enter the data for node u want to create -  ')))
-head = append(head, tail, X)
-printLL(head)
+inpLL.appendNode(X)
+
+inpLL.printLL()
