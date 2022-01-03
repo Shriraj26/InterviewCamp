@@ -2,6 +2,8 @@
 In arrays we did sort 0 1 2 based on the dutch national flag algorithm, here we need to sort the nodes that have values 0 1 2
 So here, we will create 3 pointers one for 0, one for 1 and one for 3, then we will keep on deleting nodes from
 LL and appending it to the respective pointers, and finally append 0, 1 and 2 pointers to each other!!
+Ex = 0 1 0 2 1 0
+Ans - 0 0 0 1 1 2
 """
 
 
