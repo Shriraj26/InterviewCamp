@@ -6,14 +6,6 @@ the speed of advancement of the pointers is the same, each advances one by one
 
 """
 
-"""
-Given a Linked List Node, detect whether there exists a cycle in it or not
-Now the LL can have a cycle, the approach is fairly simple, advance fast and slow pointers till they meet, once they meet,
-then only advance fast pointer one by one till it meets slow pointer again, then count nodes along the way...
-"""
-
-
-
 class Node:
 
     def __init__(self, data):
@@ -81,6 +73,9 @@ class LinkedList:
             return first
         else:
             return None
+
+
+
 
 
 arr = [int(x) for x in input().split()]
