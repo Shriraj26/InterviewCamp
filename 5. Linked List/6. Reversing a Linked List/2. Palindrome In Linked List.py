@@ -8,16 +8,18 @@ To check Palindrome, we follow these steps -
 4. Traverse and check if start == end, if not then exit
 """
 
+
 class Node:
 
     def __init__(self, data):
         self.data = data
         self.next = None
 
+
 def printLL(node):
     temp = node
     while temp is not None:
-        print(temp.data,  end = ' ')
+        print(temp.data, end=' ')
         temp = temp.next
 
 
@@ -76,7 +78,6 @@ class LinkedList:
             return prev
         return curr
 
-
     def reverseLL(self, middle):
 
         prev = middle
@@ -84,12 +85,10 @@ class LinkedList:
         middle.next = None
 
         while curr is not None:
-
             nextNode = curr.next
             curr.next = prev
             prev = curr
             curr = nextNode
-
 
         return prev
 
@@ -110,11 +109,11 @@ class LinkedList:
 
         return True
 
+
 arr = [int(x) for x in input().split()]
 
 inputLL = LinkedList()
 inputLL.createLL(arr)
-
 
 # medianNode = inputLL.getMedian()
 # print('median is at - ',medianNode.data)
