@@ -4,6 +4,11 @@ If u have an array - 1,2,3,4,5,6  We need all the combinations or selections of 
 Ex - 1,2,3 ... 1 2 3... 3,4,5 ... 4 5 6  etc
 We will be doing this by using an Auxillary buffer.. this is a temporary buffer that we will be using for our purpose
 
+To Remember -
+1. Buffer madhe bhar
+2. Sagle combinations de mala, ha i+1 kar karan repetitions nakoyet
+3. Jeva len 3 hoil teva print kar
+
 """
 
 

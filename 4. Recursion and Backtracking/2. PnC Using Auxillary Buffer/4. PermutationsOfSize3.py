@@ -11,6 +11,14 @@ But for permutations, we need to include elements that are not already included 
 say if 1 and 3 are there in buffer, 1 3 2 is also a case... Therefore, we include a flag to check that number is already
 present in the buffer or not... If not then include it in the buffer, if yes the ignore
 Afrer we process that element, we will mark that flag as false
+
+To Remember -
+1. elem not in buffer cha array banav
+2. jar elem buffer madhe nasel tr
+3. buffer madhe bhar
+4. mark kar ki bharlay buffer madhe
+5. Sagel combos ghe buffer+1 karun, ithe i+1 nai karaycha karan i repeat hou shakto... Note that ithe i nahich ahe...
+6. unmark kar ki ata kadhlay mhanun
 """
 
 arr = [int(x) for x in input().split()]

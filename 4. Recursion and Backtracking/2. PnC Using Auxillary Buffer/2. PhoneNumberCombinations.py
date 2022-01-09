@@ -1,6 +1,14 @@
 """
 Phone Number Mnemonic Problem: Given an N digit phone number, print all the strings that can be made from that phone number. Since 1 and 0 don't correspond to any characters, ignore them. For example:
 213 => AD, AE, AF, BD, BE, BF, CD, CE, CF
+
+To Remember -
+1. Buffer madhe start karna bharna from first digit cha letter ani jevdhe letters ahet tevdhe
+    (ex - 2 pahila digit ahe tr a, b, c ya saglya sathi)
+2. Sagle combinations de mala, ha i+1 kar karan repetitions nakoyet
+3. Jeva len 3 hoil teva print kar
+
+
 """
 
 myStr = input()
@@ -43,6 +51,7 @@ def printLetterCombos(stringIndex, bufferIndex):
     if stringIndex == len(phoneNo):
         return
 
+    # Iterate for a particular digit's available options in the dict say - 2 has a,b and c so for loop goes that
     for i in range(len(myDict[phoneNo[stringIndex]])):
         bufferArr[bufferIndex] = myDict[phoneNo[stringIndex]][i]
 
