@@ -18,6 +18,8 @@ q.dequeue
 
 
 """
+
+
 class QueueUsingArray:
 
     def __init__(self, n):
@@ -65,7 +67,6 @@ class QueueUsingArray:
 
         return elem
 
-
     def isEmpty(self):
         return self.length == 0
 
@@ -77,8 +78,6 @@ class QueueUsingArray:
 
     def getFront(self):
         return self.q[self.front]
-
-
 
 
 class MaxQueue:
@@ -98,19 +97,15 @@ class MaxQueue:
     def enqueue(self, elem):
         self.queue.enqueue(elem)
 
-        while not(self.maxQ.isEmpty()) and self.maxQ.getLast() < elem:
-
+        while not (self.maxQ.isEmpty()) and self.maxQ.getLast() < elem:
             # need to dequeue from back!!
             self.maxQ.removeLast()
 
-
         self.maxQ.enqueue(elem)
-
-
 
     def dequeue(self):
 
-        if self.maxQ.front == self.queue.front:
+        if self.maxQ.getFront() == self.queue.getFront():
             self.maxQ.deqeue()
 
         self.queue.deqeue()
@@ -118,17 +113,16 @@ class MaxQueue:
 
 m = MaxQueue(10)
 
+# 9 7 0 4 6 2 7 4
 m.enqueue(9)
 m.enqueue(7)
 m.enqueue(0)
 m.enqueue(4)
-print('Max yet is - ',m.getMax())
-m.enqueue(100)
+print('Max yet is - ', m.getMax())
+m.enqueue(6)
 
-m.enqueue(20)
-print('Max yet is - ',m.getMax())
+m.enqueue(2)
+print('Max yet is - ', m.getMax())
+m.enqueue(7)
 m.enqueue(4)
-m.enqueue(777)
-print('Max yet is - ',m.getMax())
-
-
+print('Max yet is - ', m.getMax())
