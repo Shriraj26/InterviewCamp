@@ -42,7 +42,7 @@ def findPathInMaze(i, j):
     if i == m - 1 and j == n - 1:
         return True
 
-    # 4. Check if we dont encounter a cycle
+    # 4. Check if we encounter a cycle
     if memo[i][j] == 'VISITING':
         return False
 

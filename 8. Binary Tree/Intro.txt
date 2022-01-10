@@ -1,0 +1,6 @@
+In a binary tree, each node can have at most 2 nodes.
+The depth of a node N is the number of nodes on the search path from root to N, not including N.
+The height of a binary tree is the maximum depth of any node in that tree
+Concepts like complete binary tree, full binary tree, perfect binary tree are good to know but not generally important for interviews.
+A binary tree with height h can have a maximum of 2^(h+1) - 1 nodes. This will happen if all nodes have 2 nodes.
+

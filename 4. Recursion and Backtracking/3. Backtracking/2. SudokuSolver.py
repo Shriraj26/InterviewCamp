@@ -1,5 +1,5 @@
 """
-SudokuSolver:​ Given a Sudoku board, find a solution. The board can have some squares filledout already.
+SudokuSolver: Given a Sudoku board, find a solution. The board can have some squares filledout already.
 You have to fill the rest of the squares.(Rules of Sudoku are as follows: In each column, row and 3 x 3 square,
 you cannothave duplicate numbers. Also, only numbers 1-9 are allowed.)
 """
@@ -21,13 +21,12 @@ box = [[None for x in range(10)] for y in range(9)]
 
 # place an item into the board
 def place(i, j, num):
-
     if canPlace(i, j, num) is False:
         return False
 
     row[i][num] = True
     col[j][num] = True
-    boxNumber = findBoxNumber(i,j)
+    boxNumber = findBoxNumber(i, j)
     box[boxNumber][num] = True
 
     return True
@@ -40,10 +39,9 @@ def removeElem(i, j, num):
     boxNum = findBoxNumber(i, j)
     box[boxNum][num] = False
 
+
 # Check Whether I can place an element into a position or not?
 def canPlace(i, j, num):
-
-
     # Check if number is already placed in row, then it cannot be placed again, return False
     if row[i][num]:
         return False
@@ -56,42 +54,38 @@ def canPlace(i, j, num):
     boxNum = findBoxNumber(i, j)
 
     if box[boxNum][num]:
-
         return False
 
     return True
 
+
 # Find 3*3 box number for a particular i,j
 def findBoxNumber(i, j):
+    return (i // 3) * 3 + (j // 3)
 
-    return (i//3)*3 + (j//3)
 
 # find the next element to place in to the board after i,j
 def nextElem(i, j):
-
     if j == 8:
-        return i+1, 0
+        return i + 1, 0
 
-    return i, j+1
+    return i, j + 1
+
 
 # Print matrix helper function
 def printMat(mat):
-
     for i in range(len(mat)):
         for j in range(len(mat[0])):
-            print(mat[i][j], end = ' ')
+            print(mat[i][j], end=' ')
         print()
-
 
 
 # Initialize the row, col and box matrices, here we need to add the existing numbers to the board
 def placeExistingElements():
-
     for i in range(9):
         for j in range(9):
             if mat[i][j] != 0:
                 place(i, j, mat[i][j])
-
 
 
 # Solve the sudoku
@@ -109,7 +103,7 @@ def sudokuSolver(i, j):
     for num in range(1, 10):
 
         # check if u can place the elem -
-        if canPlace(i, j,num):
+        if canPlace(i, j, num):
 
             # Initially place the elem
             place(i, j, num)
@@ -133,6 +127,3 @@ def sudokuSolver(i, j):
 placeExistingElements()
 print(sudokuSolver(0, 0))
 printMat(mat)
-
-
-
