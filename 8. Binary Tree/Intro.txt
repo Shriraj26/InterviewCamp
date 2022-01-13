@@ -4,3 +4,10 @@ The height of a binary tree is the maximum depth of any node in that tree
 Concepts like complete binary tree, full binary tree, perfect binary tree are good to know but not generally important for interviews.
 A binary tree with height h can have a maximum of 2^(h+1) - 1 nodes. This will happen if all nodes have 2 nodes.
 
+
+
+In bottom up approach, mostly we are returning the things to the root.
+In the top down approach, root sends the data towards its leaves and the children keep on updating the data, in the end we do not
+return anything, we just update the data...
+
+
