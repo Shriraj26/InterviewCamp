@@ -14,6 +14,7 @@ We will consider a dummy tree as follows -
 
 """
 
+
 class TreeNode:
 
     def __init__(self, data):
@@ -21,15 +22,15 @@ class TreeNode:
         self.left = None
         self.right = None
 
-def isBalanced(root):
 
+def isBalanced(root):
     if root is None:
         return 0
 
     leftHeight = isBalanced(root.left)
     rightHeight = isBalanced(root.right)
 
-    print('Node - ', root.data, ' left height - ',leftHeight, ' right height - ', rightHeight)
+    print('Node - ', root.data, ' left height - ', leftHeight, ' right height - ', rightHeight)
     # if either left or right subtrees give -1 as the ans, then we return as -1 as the tree is not balanced
     if leftHeight == -1 or rightHeight == -1:
         return -1
@@ -63,5 +64,4 @@ decision = isBalanced(Root)
 if decision == -1:
     print('Tree is not Balanced')
 else:
-    print('Tree is balanced and Height of the Tree is - ',decision - 1)
-
+    print('Tree is balanced and Height of the Tree is - ', decision - 1)
