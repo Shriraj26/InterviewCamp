@@ -1,0 +1,24 @@
+Bit Manipulation is a hell of a thing and we are going to nail this shit!!!
+
+U can perform bitwise operations like -
+AND, OR, NOT, EX-OR
+
+1. To Flip bits, u can either take one's compliment -  num ^ 1
+    or u can ex-or it with one!!
+    Ex - 1011 exor 1111 -- 0100
+    if u want u can flip only the bits that u want that is -
+    1011 if u want to flip last 2 blits, then u can ex-or with one that is only at last 2 bits that is -
+    1011 exor 0011 --- 1000
+
+2. Multiply or divide op -
+    to Multiply by 2^n, u can shift left bits by n
+    Ex - 1 << 4 -- 16, in this case the bits are shift towards left and res got multiplied by 2^4 that is 16
+    Same for divide.
+
+3. get bits at ith position -
+    To get bits ar ith position, shift right the num by i,
+    Then and it with 1
+    Ex - (num >> i) & 1
+    shifting right will bring the ith bit to index 0, then anding with 1 will give 1 if it was already 1
+    else it will give 0
+

@@ -44,6 +44,8 @@ def lowestCommonAncestor(root, A, B):
         return leftLCA
     elif rightLCA is not None:
         return rightLCA
+
+    # this is very important!!! if nothing else matches, then return None
     return None
 
 

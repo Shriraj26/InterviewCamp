@@ -1,0 +1,42 @@
+Questions that can be solved with very few modifications  -
+
+1. DFS -
+    1. Detect Cycle -
+    2. Top Sort - After u call dfs on all its neighbors, push the node to stack, in the end return reverse stack
+        - Only possible if it is an directed acyclic graph...
+    3. Connected Components, Islands
+    4. Clone a graph -
+    5. Longest Path of Directed Acyclic Graph...
+        - get topsort order.. from parent to child
+        - loop in that order,
+        -   set diameter to the max of diameter and current node's longest path
+        -   loop neighbors of the node,
+        -       check if longestPath of current + 1 > neighbor's longest path
+                    if yes then update
+        IN hte end return the diameter
+
+
+2. BFS -
+
+3. Bipartite Graph -
+    1. Mostly the graph given will be undirected graph
+    2. Core idea to remember - u can split graph into grpups of 2 such that nodes in one group will not have
+        edge between them... therefore, if there is an odd length cycle, then its not bipartite
+    3. 
+
+DFS Idea to remember -
+1. Mark node is Visiting
+2. process the node, print it...
+3. Loop through all its neighbors, if any node is not Visited,(visited is None) call dfs on it
+4. Mark the node as Visited
+
+BFS -
+1. Put initial node to q
+2. Mark it as visiting
+2. loop till q is not empty
+3.      pop from q
+4.      loop add all unvisited neighbors to the q
+5.          Add them to q
+5.          Mark them as visiting ( mark neighbor visiting)
+6.      Mark current node as Visited
+

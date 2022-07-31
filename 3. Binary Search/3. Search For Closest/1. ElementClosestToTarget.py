@@ -43,4 +43,32 @@ def binSearch():
     return result
 
 
-print(binSearch())
+def recordTry(result, mid):
+
+    if result is None:
+        result = mid
+
+    if abs(result - arr[mid]) < abs(target - arr[mid]):
+        result = mid
+
+    return result
+
+def binSearch2():
+
+    start = 0
+    end = len(arr) - 1
+    result = None
+    while start <= end:
+
+        mid = start + (end - start) // 2
+        result = record(mid, result)
+        if arr[mid] < target:
+            start = mid + 1
+        elif arr[mid] > target:
+            end = mid - 1
+        else:
+            return mid
+
+    return result
+
+print(binSearch2())

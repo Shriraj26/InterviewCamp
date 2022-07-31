@@ -22,7 +22,7 @@ arr = [int(x) for x in input().split()]
 target = int(input())
 
 
-def coinVariations(total, startIndex):
+def coinVariations(total):
     if total > target:
         return
 
@@ -31,16 +31,16 @@ def coinVariations(total, startIndex):
         print(bufferArr)
         return
 
-    for i in range(startIndex, len(arr)):
+    for i in range(len(arr)):
         # Add the element to the buffer
         bufferArr.append(arr[i])
 
         # Give me all possible combinations using this number, note her that we haven't incremented i this means
         # repetitions are allowed
-        coinVariations(total + arr[i], i)
+        coinVariations(total + arr[i])
 
         # After my work, pop the elem from the buffer and move to next elem in the array in the loop
         bufferArr.pop()
 
 
-coinVariations(0, 0)
+coinVariations(0)

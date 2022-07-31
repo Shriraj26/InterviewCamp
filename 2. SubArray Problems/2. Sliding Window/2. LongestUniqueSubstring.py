@@ -5,30 +5,42 @@ For example: "whatwhywhere" --> "atwhy"
 
 a = input()
 start = 0
-end = 0
-maxSubstr = ''
-mydict = {}
-for i in range(ord('a'), ord('z') + 1):
-    mydict[chr(i)] = None
+end = 1
+longest = 1
+myDict = {}
+myDict[a[start]]= 0
+newStr = ''
 
-print(mydict)
+def longSubStrWithoutRepeat(start, end, newStr, longest):
+    while end < len(a):
 
-while start < len(a):
+        toAdd = a[end]
 
-    print(start, end, maxSubstr)
-    if end == len(a):
-        break
-    if mydict[a[end]] is not None:
+        if myDict.get(toAdd) is not None and myDict[toAdd] >= start:
+            start = myDict[toAdd] + 1
 
-        start = mydict[a[end]] + 1
-        mydict[a[end]] = None
+        myDict[toAdd] = end
 
+        if end - start + 1 > longest:
+            longest = end - start + 1
+            newStr = a[start: end + 1]
 
-    else:
-        mydict[a[end]] = end
-        if len(maxSubstr) < len(a[start: end + 1]):
-            maxSubstr = a[start: end + 1]
-
+        # print(newStr)
         end += 1
+    print(newStr)
+    return longest
 
-print(maxSubstr)
+
+print(longSubStrWithoutRepeat(start, end, newStr, longest))
+
+
+
+
+
+
+
+
+
+
+
+

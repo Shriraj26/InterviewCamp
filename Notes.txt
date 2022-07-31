@@ -1,0 +1,64 @@
+1. Array and String 1
+
+    1. Reverse traversal -
+        1. Copy even nums 2 times
+        2. reverse Words of a sentence
+    2. Traverse from both ends -
+        1. Reverse an array - start < end
+        2. 2 Sum start end approach for sorted array, or dict approach
+        3. return Squares of sorted array also in sorted order - take square of all, start end, compare and put in diff array
+        4. Contigous Subarray that is not sorted, once sorted will make entire array sorted...
+
+    3. Partition Arrays -
+        1. Move Zeroes to the start - normal for loop and one start pointer, swap with non zero elem and inc start
+        2. Move zeroes to end - Same as above with reverse for loop..
+        3. Dutch National Flag - move elems less than pivot bet start and pivot, equal to in bet, greater than at end.
+        4. Sort Marbles 0 1 2 - same as above ,just use pivot as 1
+
+2. Subarray Problems -
+    1. Maximum Subarray Sum - Kadane's Algo - max(last + curr , curr) -- maxTill_i, maxEver = max(maxEver, maxTill_i)
+    2. Subarray that sums to X - Positive Numbers only - Sliding Window - if start > end -- end = start, sum = arr[start]
+    3. Longest String without repeating chars - start <= myDict[end]  ----> start = myDict[end] + 1
+    3. Prefix Sum - Subarray that sums to 0 - Positive and -ve numbers... Dictionary
+    4. Prefix Sum - Subarray that sums to k -- same as above but instead of 0 check k and check if totalSum - k has reapeated
+
+3. Linked List -
+
+    1. Append nodes to LL -
+        1. Append to end of LL
+        2. Sort 0 1 2 nodes of LL
+        3. Separate odd even LL
+    2. Delete Nodes from LL
+        1. Delete nodes when head is given
+        2. Delete nodes when node to delete is given ... copy next nodes to curr and at the end, cut of last node
+    3. Slow and Fast Pointer -
+        1. Has Cycle - fast and slow match
+        2. Length of cycla - match fast till fast == slow, count = 1 then inc count till fast != slow and fast = fast.next
+        3. Median of LL - Fast and slow, return slow as slow points to the mid
+        4. Nth node of LL - initialy slow to dummy, fast to dummy, proceed fast till n nodes between slow and fast.
+            Then till fast is NOne, advance slow and fast one by one, then at the end, slow is prev to nth node to delete
+    4. Reverse LL -
+        1. Reverse LL - store next of curr, point curr.next to prev, point prev to curr, curr to next... loop curr
+        2. Palindrome LL - go till mid, reverse mid.next, compare first node and reversed node one by one...
+
+3. LRU Cache -
+    To do...
+
+4. Arrays and Strings 2 -
+
+5. Stacks -
+    1. Implement a stack -
+        1. Stack Template - implement stack class
+        2. Check if elem exists in stack
+        3. Using 2 stacks to implement one queue - either enqueue - O(1), dequeue - O(n) or vice versa
+        4. Using 1 array to implement 2 stacks - 2 pointer methond start and end... edge case - if only one stack is pushing elems
+            say - start should not go beyond len(arr) and same for end, end should not go less than 0
+    2. MaxStack -
+        1. Implement max stack with O(1) op for getting max elem -
+            Implement 2 stacks, one normal and one for max stack, only push to max stack
+            if curr elem is greater than or equal to curr elem at max stack, normal push for normal stack.,....
+
+
+
+
+

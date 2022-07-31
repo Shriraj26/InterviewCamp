@@ -4,8 +4,8 @@ The first occurrence is the first node that we will encounter in an in-order tra
 
 The algo is easy an we use record and move on technique -
 1. initialize a root node.
-2. if node is greater than the given elem, go right,
-3. if node is smaller than the given elem, go left,
+2. if node is greater than the given elem, go left,
+3. if node is smaller than the given elem, go right,
 4. if node is equal, then record the node and then again go left... by this way, if there still exists duplicates, we can
 find it in its left...
 
@@ -28,9 +28,9 @@ def findFirstOccurrence(root, elem):
     while root is not None:
 
         if root.data > elem:
-            root = root.right
-        elif root.data < elem:
             root = root.left
+        elif root.data < elem:
+            root = root.right
         else:
             res = root
             root = root.left

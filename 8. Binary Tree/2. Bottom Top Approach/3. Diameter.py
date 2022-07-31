@@ -2,7 +2,7 @@
 There are 4 cases -
 
 1. if root is none, height is 0 and diameter is 0
-2. if ld == 0 or rd == 0, then diameter is 1
+2. if lh == 0 or rh == 0, then diameter is 1
 3. if lh + rh < ld or lh + rh < rd,  then diameter is max(ld, rd)
 4. if lh + rh >= ld or lh + rh >= rd,  then diameter is lh + rh + 1
 

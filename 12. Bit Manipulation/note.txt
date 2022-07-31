@@ -1,0 +1,11 @@
+1. Count 1 bits -
+    loop till num is not 0 and do num = num & (num - 1) ... count ++ meanwhile
+
+2. Get ith bit -
+    right shift the num by i position and AND it with 1 --- (num >> i) & 1
+
+3. Swap ith and jth bit
+    get the ith and jth bit by above formula, if both are not equal, then
+    exor the num with this mask = (1 << i ) | (1 << j) -- this is the mask that will do th job
+
+4. reverse the num, - call the swap bits from 0 to 31 and pass in i and j as 0 and 31, inc i and dec j it will do the job

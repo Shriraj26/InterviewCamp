@@ -1,5 +1,5 @@
 """
-Inorder - Left, Root, Right
+Inorder - Left, Root, Right -- Remember BST - sorted order -- inorder
 PreOrder - Root, Left, Right
 PostOrder - Left, Right, Root
 
@@ -49,6 +49,7 @@ def postOrder(root):
     print(root.data, end=' ')
 
 
+
 Root = TreeNode(1)
 node2 = TreeNode(2)
 node3 = TreeNode(3)
@@ -74,3 +75,4 @@ print()
 
 print('Postorder - ')
 postOrder(Root)
+

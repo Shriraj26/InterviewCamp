@@ -1,5 +1,7 @@
 """
 Reverse words in a sentence
+We did this by 2 pointer approach too!! end to len(str) and start to len(str) - 1, decrement start...
+if start is space, then store string from start+1 to end... and then do end = start
 """
 
 sentence = input()

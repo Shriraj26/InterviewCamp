@@ -36,3 +36,13 @@ def printAllCombos(startIndex, bufferIndex):
 
 
 printAllCombos(0, 0)
+
+
+# buffer index adn start index, bufferindex for the buffer and start index for the array itself...
+
+# start from both,
+
+# base case - when buffer len croses then print buffer array
+# when array len crosses, then reuturn...
+
+# loop in the array an start from start index...

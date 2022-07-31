@@ -56,28 +56,30 @@ myDict = {'+': 1, '-': 1, '/': 2, '*': 2}
 
 
 def process():
-    top = 0
-    bot = 0
-    op = '+'
     result = 0
+
+    # get operand 1
     if not (operandStack.isEmpty()):
         bot = operandStack.pop()
     else:
         print('elems should be there in stack to pop,input is wrong 1')
         return
 
+    # get operand 2
     if not (operandStack.isEmpty()):
         top = operandStack.pop()
     else:
         print('elems should be there in stack to pop,input is wrong 2')
         return
 
+    # get operator
     if not (operatorStack.isEmpty()):
         op = operatorStack.pop()
     else:
         print('operator elems should be there in stack to pop,input is wrong 3')
         return
 
+    # Perform operation
     if op == '+':
         result = top + bot
     elif op == '-':
@@ -87,6 +89,7 @@ def process():
     elif op == '/':
         result = top // bot
 
+    # store result in the operand
     operandStack.push(result)
 
 
@@ -97,7 +100,7 @@ def processString():
 
             operandStack.push(int(i))
 
-        else:
+        elif myDict.get(i) is not None:
             if operatorStack.isEmpty():
 
                 operatorStack.push(i)
@@ -114,7 +117,7 @@ def processString():
                 else:
                     operatorStack.push(i)
 
-    while not (operandStack.isEmpty()):
+    while not (operatorStack.isEmpty()):
 
         if len(operandStack.stack) == 1:
             break

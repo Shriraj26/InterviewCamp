@@ -1,7 +1,7 @@
 """
 Given a sentence - "i live in a house" convert it to -  "house a in live i".
 end will point to len(str) and start will point to len(str) - 1, then decrease start, if u encounter
-a space, then push a new word from s[start:end]
+a space, then push a new word from s[start+1:end]
 """
 
 s = input()

@@ -36,4 +36,28 @@ def binSearch():
     return -1
 
 
-print(binSearch())
+def binSearch2():
+
+    start = 0
+    end = len(arr) - 1
+
+    while start <= end:
+
+        mid = start + (end - start) // 2
+
+        if arr[mid] == target:
+            if mid > 0 and arr[mid-1] == arr[mid]:
+                end = mid - 1
+            else:
+                return mid
+
+        elif arr[mid] < target:
+            start = mid + 1
+        else:
+            end = mid - 1
+
+    return -1
+
+# print(binSearch())
+print(binSearch2())
+

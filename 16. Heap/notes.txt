@@ -1,0 +1,19 @@
+1. For implementing top K greatest elems, create a min Heap
+
+2. For implementing top K smallest elems, create a max Heap
+
+3. To use heap, in python default is always a min heap, and it is used by importing heapq module.
+
+4. To create Heap, u can heapify empty array or put elems in array and then heapify it.
+
+5. Heapify opration - O(n) TC, insert and delete - O(log(n)) -- where n elems in array
+
+6. What to do always remember by heart!!
+    1. Create a array of size k for your heap, heapify it
+    2. then from k+1 to length of input array n, perform the opration of checking.. whether for top k
+        greatest or top k smallest elems
+    3. this has a time complexity of -
+        O(K + Nlog(k)) -- K for creating heap of elems k initially and then Nlog(k) for loop
+        from k+1 to n where u insert and delete.
+
+7. Be careful how u use maxHeap, in Python multiply elems by -1 then only u can use it

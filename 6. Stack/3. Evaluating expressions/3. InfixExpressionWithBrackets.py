@@ -113,7 +113,8 @@ def processString():
                 else:
                     operatorStack.push(i)
 
-    while not (operandStack.isEmpty()):
+    # process the last operands
+    while not (operatorStack.isEmpty()):
 
         if len(operandStack.stack) == 1:
             break

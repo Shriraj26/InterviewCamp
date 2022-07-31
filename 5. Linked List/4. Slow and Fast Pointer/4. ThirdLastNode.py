@@ -4,6 +4,9 @@ head node, and second pointer assigned to the 3rd node, by the time second point
 reached the third last element of the LL, thus u get the result that way
 the speed of advancement of the pointers is the same, each advances one by one
 
+Refer the nth last node for the solution... its better than this...
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
 """
 
 class Node:
