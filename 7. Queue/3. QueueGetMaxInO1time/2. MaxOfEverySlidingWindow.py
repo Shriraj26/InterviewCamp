@@ -9,9 +9,6 @@ A = [4,6,5,2,4,7] and K = 3, windows are as follows:
 [4,6,5,2,4,7] : Max = 7
 
 Output: 6,6,5,7
-
-
-
 """
 class QueueUsingArray:
 

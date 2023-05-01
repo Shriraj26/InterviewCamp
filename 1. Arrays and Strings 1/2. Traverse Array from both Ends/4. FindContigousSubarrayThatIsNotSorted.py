@@ -1,10 +1,10 @@
 """Given an array of integers, find the continuous subarray, which when sorted, results in the entire array being
 sorted. For example: A = [0,2,3,1,8,6,9], result is the subarray [2,3,1,8,6]
-0. Find min and max nums
 1. Find the first dip
 2. Find the first rise
-3. Expand Left till u get the number that is smaller than the minValue to include all the greater numbers
-4. Expand right if u get a number that is greater than the maxValue to include all the smaller numbers
+3. Find min and max nums in subArr arr[dip:rise+1]
+4. Expand Left till u get the number that is smaller than the minValue to include all the greater numbers
+5. Expand right if u get a number that is greater than the maxValue to include all the smaller numbers
 """
 import sys
 

@@ -25,18 +25,22 @@ maxSum = arr[0]
 maxSumTillNow = arr[0]
 start = 0
 end = 0
-count = 0
+
 for i in range(1, len(arr)):
 
     # At i, will will check arr[i] + maxSum till now and store the max too
     maxSumTillNow = max( maxSumTillNow + arr[i], arr[i])
-    if maxSum < maxSumTillNow:
-        maxSum = maxSumTillNow
-        if count == 0:
-            start = i
-        else:
-            end = i
-        count += 1
+
+    # to check if max summ till i is arr[i] this means that subarray has started that will give max sum
+    if maxSumTillNow == arr[i]:
+        start = i
+
+    maxSum = max(maxSum, maxSumTillNow)
+    # To check if the maxSum has now reached the end, then end will be assigned accordingly
+    if maxSum == maxSumTillNow:
+        end = i
+
+    
     # maxSum = max( maxSumTillNow, maxSum)
 
 print('MaxSum is - ',maxSum)

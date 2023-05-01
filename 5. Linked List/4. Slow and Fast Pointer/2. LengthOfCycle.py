@@ -5,7 +5,6 @@ then only advance fast pointer one by one till it meets slow pointer again, then
 """
 
 
-
 class Node:
 
     def __init__(self, data):
@@ -50,10 +49,8 @@ class LinkedList:
         return temp
 
     def getCycleLength(self):
-
         slow = self.head
         fast = self.head
-
 
         while fast is not None:
 
@@ -92,4 +89,4 @@ node = inputLL.getNode(index)
 # Join the tail to the node to form a cycle, if u comment this line, then it will give u false
 inputLL.tail.next = node
 
-print('Length of cycle - ',inputLL.getCycleLength())
+print('Length of cycle - ', inputLL.getCycleLength())
