@@ -25,14 +25,14 @@ def binSearchSmallestElement():
         mid = start + (end - start) // 2
 
         # This is our master condition...
-        if (arr[mid] <= right) and (mid == 0 or arr[mid - 1] > arr[mid]):
-            return mid
+        if arr[mid] <= right:
+            if mid == 0 or arr[mid - 1] > arr[mid]:
+                return mid
+            else:
+                end = mid - 1
 
         elif arr[mid] > right:
             start = mid + 1
-
-        else:
-            end = mid - 1
 
     return -1
 
